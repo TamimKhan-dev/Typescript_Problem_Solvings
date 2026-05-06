@@ -7,3 +7,15 @@ const filterEvenNumbers = (arr: number[]): number[] => {
 const reverseString = (str: string): string => {
   return str.split("").reverse().join("");
 };
+
+// Problem 3: String Or Number Checker
+type StringOrNumber = string | number;
+
+const checkType = (value: StringOrNumber) => {
+  if (typeof value === "string") {
+    return "String";
+  } else if (typeof value === "number") {
+    return "Number";
+  }
+};
+

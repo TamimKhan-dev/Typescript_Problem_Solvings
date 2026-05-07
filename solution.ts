@@ -31,6 +31,30 @@ interface Book {
   publishedYear: number;
 }
 
-const toggleReadStatus = (obj: Book): Book & {isRead: true} => {
+const toggleReadStatus = (obj: Book): Book & { isRead: true } => {
   return { ...obj, isRead: true };
 };
+
+// Problem 6: Get Details
+class Person {
+  name: string;
+  age: number;
+
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
+}
+
+class Student extends Person {
+  grade: string;
+
+  constructor(name: string, age: number, grade: string) {
+    super(name, age);
+    this.grade = grade;
+  }
+
+  getDetails() {
+    return `Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`;
+  }
+}

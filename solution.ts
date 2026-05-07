@@ -20,6 +20,17 @@ const checkType = (value: StringOrNumber) => {
 };
 
 // Problem 4: Get Property
-const getProperty = <T,K extends keyof T>(obj: T, key: K) => {
+const getProperty = <T, K extends keyof T>(obj: T, key: K): T[K] => {
   return obj[key];
+};
+
+// Problem 5: Toggle Reading Status
+interface Book {
+  title: string;
+  author: string;
+  publishedYear: number;
+}
+
+const toggleReadStatus = (obj: Book): Book & {isRead: true} => {
+  return { ...obj, isRead: true };
 };

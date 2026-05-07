@@ -58,3 +58,8 @@ class Student extends Person {
     return `Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`;
   }
 }
+
+// Problem 7: Find Duplicates
+const getIntersection = (arr1: number[], arr2: number[]): number[] => {
+   return arr1.filter((value: number) => arr2.includes(value))
+};
